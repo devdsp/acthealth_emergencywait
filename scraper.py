@@ -13,7 +13,7 @@ for row in soup.find("table", { "class" : "emergencywait" }).findAll('tr'):
         cur.executemany(
             "INSERT INTO data VALUES(?,?,?,?)",
             (
-                (now,"calvery",cells[0].getText(),cells[1].getText()),
+                (now,"calvary",cells[0].getText(),cells[1].getText()),
                 (now,"tch",    cells[0].getText(),cells[2].getText())
             )
         )
